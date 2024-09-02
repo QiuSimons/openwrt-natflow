@@ -76,7 +76,7 @@ define Package/natflow-boot/install
 	$(INSTALL_DIR) $(1)/lib/preinit
 	$(INSTALL_DATA) ./files/natflow-boot.preinit $(1)/lib/preinit/95_natflow-boot
 	$(INSTALL_DIR) $(1)/etc/uci-defaults
-	$(INSTALL_BIN) ./files/51-luci-firewall-natflow $(1)/etc/uci-defaults
+	$(INSTALL_BIN) ./files/60-luci-firewall-natflow $(1)/etc/uci-defaults
 endef
 
 $(eval $(call KernelPackage,natflow))
